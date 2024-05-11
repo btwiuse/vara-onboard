@@ -9,7 +9,7 @@ import styles from 'styles/Home.module.css';
 
 import Wallets from './Wallets';
 
-const APP_NAME = 'Polkadot Demo';
+const APP_NAME = 'Vara Demo';
 
 const ConnectContainer = () => {
   let injectedWalletProvider = new InjectedWalletProvider(extensionConfig, APP_NAME);
@@ -17,13 +17,21 @@ const ConnectContainer = () => {
     projectId: '4fae85e642724ee66587fa9f37b997e2',
     relayUrl: 'wss://relay.walletconnect.com',
     metadata: {
-      name: 'Polkadot Demo',
-      description: 'Polkadot Demo',
+      name: 'Vara Demo',
+      description: 'Vara Demo',
       url: '#',
       icons: ['/images/wallet-connect.svg'],
     },
-    chainIds: ['polkadot:e143f23803ac50e8f6f8e62695d1ce9e', 'polkadot:91b171bb158e2d3848fa23a9f1c25182'],
-    optionalChainIds: ['polkadot:67f9723393ef76214df0118c34bbbd3d', 'polkadot:7c34d42fc815d392057c78b49f2755c7'],
+    chainIds: [
+	    'polkadot:fe1b4c55fd4d668101126434206571a7', // vara mainnet
+	    //'polkadot:e143f23803ac50e8f6f8e62695d1ce9e',
+	    //'polkadot:91b171bb158e2d3848fa23a9f1c25182',
+    ],
+    optionalChainIds: [
+	    'polkadot:525639f713f397dcf839bd022cd821f3', // vara testnet
+	    //'polkadot:67f9723393ef76214df0118c34bbbd3d',
+	    //'polkadot:7c34d42fc815d392057c78b49f2755c7'
+    ],
     onSessionDelete: () => {
       // do something when session is removed
     },

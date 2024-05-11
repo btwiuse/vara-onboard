@@ -12,7 +12,7 @@ const Wallet = ({ wallet }: { wallet: BaseWallet }) => {
 
   useEffect(() => {
     const setupApi = async () => {
-      const provider = new WsProvider('wss://westend-rpc.polkadot.io');
+      const provider = new WsProvider('wss://rpc.vara.network');
       const api = await ApiPromise.create({ provider });
 
       setApi(api);
